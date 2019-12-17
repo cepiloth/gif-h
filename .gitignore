@@ -1,0 +1,12 @@
+
+*.db
+*.opendb
+.vs/gif-h/v16/.suo
+*.ipch
+*.tlog
+*.log
+*.pdb
+*.obj
+*.idb
+*.exe
+*.ilk
