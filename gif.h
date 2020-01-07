@@ -595,9 +595,16 @@ void GifWritePalette( const GifPalette* pPal, FILE* f )
 
     for(int ii=1; ii<(1 << pPal->bitDepth); ++ii)
     {
+#ifdef USE_RGB_ODER
         uint32_t r = pPal->r[ii];
         uint32_t g = pPal->g[ii];
         uint32_t b = pPal->b[ii];
+#else
+        uint32_t b = pPal->r[ii];
+        uint32_t g = pPal->g[ii];
+        uint32_t r = pPal->b[ii];
+#endif
+        
 
         fputc((int)r, f);
         fputc((int)g, f);
